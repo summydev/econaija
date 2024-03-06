@@ -65,24 +65,40 @@ class Splash extends State<SplashScreen>  {
   
 
 class Onboarding1 extends StatelessWidget {
-  const Onboarding1({super.key});
-  void main() => runApp(Onboarding1());
+  const Onboarding1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Column(
-          children: [  
-            Image.asset('assets/images/Onboarding1 pic.jpg'),
-            Text('Reduce',
-            style: TextStyle(color: Color.fromARGB(202, 26, 236, 100), fontSize: 30),
-            ),
-            Text('cut down on waste as possible, and dispose properly',
-            style: TextStyle(color: Color.fromARGB(202, 26, 236, 100), fontSize: 15),
-            ),
-          ],
-        )),
-    );      
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/images/Onboarding1 pic.jpg'),
+              SizedBox(height: 80),
+              Text(
+                'Reduce',
+                style: TextStyle(
+                  color: Color.fromARGB(202, 26, 236, 100),
+                  fontSize: 30,
+                ),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'cut down on waste as possible, and dispose properly',
+                style: TextStyle(
+                  color: Color.fromARGB(202, 26, 236, 100),
+                  fontSize: 15,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
-}
+
+
+
