@@ -1,6 +1,7 @@
 import 'dart:async';
 
 
+import 'package:econaija/SignUp%20&%20Log%20in%20page.dart';
 import 'package:flutter/material.dart';
 
 main() {
@@ -46,7 +47,7 @@ class Splash extends State<SplashScreen>  {
             Align( alignment: Alignment.center),
             Text(
               "EcoNaija",
-            style: TextStyle(color: Colors.white, fontSize: 70),
+            style: TextStyle(color: Colors.white, fontSize: 64),
             textAlign: TextAlign.center,
             ),
             Text(
@@ -209,7 +210,7 @@ class onboarding3 extends StatelessWidget {
           ),
               onPressed: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => onboarding2())); 
+                builder: (BuildContext context) => SignupPage())); 
               },   
               child: Text('Get Started',
               style: TextStyle(color: Colors.white),
@@ -217,7 +218,7 @@ class onboarding3 extends StatelessWidget {
              ),
              ElevatedButton(
                 style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.white,
             elevation: 0,
           ),
               onPressed: () {
@@ -225,7 +226,7 @@ class onboarding3 extends StatelessWidget {
                 builder: (BuildContext context) => onboarding3())); 
               },   
               child: Text('Log In',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.green),
               ), 
              ),
             ],
