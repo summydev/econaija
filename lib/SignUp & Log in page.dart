@@ -43,7 +43,7 @@ import 'package:flutter/material.dart';
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(18),
                               borderSide: BorderSide.none),
-                          fillColor: Colors.purple.withOpacity(0.1),
+                          fillColor: Colors.grey.withOpacity(0.1),
                           filled: true,
                           prefixIcon: const Icon(Icons.person)),
                     ),
@@ -56,7 +56,7 @@ import 'package:flutter/material.dart';
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(18),
                               borderSide: BorderSide.none),
-                          fillColor: Colors.purple.withOpacity(0.1),
+                          fillColor: Colors.grey.withOpacity(0.1),
                           filled: true,
                           prefixIcon: const Icon(Icons.person)),
                     ),
@@ -70,7 +70,7 @@ import 'package:flutter/material.dart';
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(18),
                               borderSide: BorderSide.none),
-                          fillColor: Colors.purple.withOpacity(0.1),
+                          fillColor: Colors.grey.withOpacity(0.1),
                           filled: true,
                           prefixIcon: const Icon(Icons.email)),
                     ),
@@ -83,7 +83,7 @@ import 'package:flutter/material.dart';
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(18),
                               borderSide: BorderSide.none),
-                          fillColor: Colors.purple.withOpacity(0.1),
+                          fillColor: Colors.grey.withOpacity(0.1),
                           filled: true,
                           prefixIcon: const Icon(Icons.person)),
                     ),
@@ -92,11 +92,11 @@ import 'package:flutter/material.dart';
 
                     TextField(
                       decoration: InputDecoration(
-                        hintText: "Password",
+                        hintText: "Password: minimum of 8 characters",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(18),
                             borderSide: BorderSide.none),
-                        fillColor: Colors.purple.withOpacity(0.1),
+                        fillColor: Colors.grey.withOpacity(0.1),
                         filled: true,
                         prefixIcon: const Icon(Icons.password),
                       ),
@@ -130,7 +130,7 @@ import 'package:flutter/material.dart';
                     TextButton(
                         onPressed: () {
                         },
-                        child: const Text("Login", style: TextStyle(color: Colors.green),)
+                        child: const Text("Log in", style: TextStyle(color: Colors.green),)
                     )
                   ],
                 )
