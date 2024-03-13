@@ -1,8 +1,8 @@
 import 'dart:async';
 
-
-import 'package:econaija/SignUp%20&%20Log%20in%20page.dart';
 import 'package:flutter/material.dart';
+
+import 'SignupPage.dart';
 
 main() {
   runApp(MyApp());
@@ -99,6 +99,8 @@ class Onboarding1 extends StatelessWidget {
               SizedBox(height: 40),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  shape: const StadiumBorder(),
+                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
             backgroundColor: Colors.green,
             elevation: 0,
           ),
@@ -108,9 +110,9 @@ class Onboarding1 extends StatelessWidget {
               },
               child: Text('Next',
               style: TextStyle(color: Colors.white),
-                 ),
-              ), 
-            ],
+              ),
+             ),
+  ],
           ),
         ),
       ),
@@ -152,6 +154,8 @@ class onboarding2 extends StatelessWidget {
               SizedBox(height: 40),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  shape: const StadiumBorder(),
+                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
             backgroundColor: Colors.green,
             elevation: 0,
           ),
@@ -205,6 +209,8 @@ class onboarding3 extends StatelessWidget {
               SizedBox(height: 40),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  shape: const StadiumBorder(),
+                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
             backgroundColor: Colors.green,
             elevation: 0,
           ),
@@ -218,6 +224,8 @@ class onboarding3 extends StatelessWidget {
              ),
              ElevatedButton(
                 style: ElevatedButton.styleFrom(
+                  shape: const StadiumBorder(),
+                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
             backgroundColor: Colors.white,
             elevation: 0,
           ),

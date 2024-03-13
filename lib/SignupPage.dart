@@ -110,6 +110,8 @@ import 'package:flutter/material.dart';
 
                     child: ElevatedButton(
                       onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (BuildContext context) => LoginPage()));
                       },
                       child: const Text(
                         "Create a free account",
@@ -142,5 +144,12 @@ import 'package:flutter/material.dart';
     );
   }
 }
+
+LoginPage() {
+}
+
+
+
+
   
   
