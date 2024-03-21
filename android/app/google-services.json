@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "168968310056",
+    "project_id": "econaija-695be",
+    "storage_bucket": "econaija-695be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168968310056:android:6b35cf3b3e2d5fb1d7141d",
+        "android_client_info": {
+          "package_name": "com.example.econaija"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVYi_Kosupl-dJOy3Vv9ZHDg1vQ0_hBsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

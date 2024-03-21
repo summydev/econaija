@@ -3,26 +3,30 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'SignupPage.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SplashScreen());   // define it once at root level.
+    return MaterialApp(home: SplashScreen()); // define it once at root level.
   }
 }
 
-  class SplashScreen extends StatefulWidget {
-    @override
+class SplashScreen extends StatefulWidget {
+  @override
   Splash createState() => Splash();
-  
 }
 
-class Splash extends State<SplashScreen>  {
-
+class Splash extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -31,40 +35,34 @@ class Splash extends State<SplashScreen>  {
   @override
   Widget build(BuildContext context) {
     Timer(
-            Duration(seconds:3),
-                () =>
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => Onboarding1())));
+        Duration(seconds: 3),
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => Onboarding1())));
 
     var green = Colors.green;
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: green,
-        body: const Column(
-          mainAxisAlignment: MainAxisAlignment.center, 
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Align( alignment: Alignment.center),
-            Text(
-              "EcoNaija",
-            style: TextStyle(color: Colors.white, fontSize: 64),
-            textAlign: TextAlign.center,
-            ),
-            Text(
-              "Reduce.Reuse.Recycle",
-            style: TextStyle(color: Colors.white, fontSize: 19),
-            textAlign: TextAlign.center,
+          backgroundColor: green,
+          body: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Align(alignment: Alignment.center),
+              Text(
+                "EcoNaija",
+                style: TextStyle(color: Colors.white, fontSize: 64),
+                textAlign: TextAlign.center,
               ),
-          ],
-        )
-      ),
+              Text(
+                "Reduce.Reuse.Recycle",
+                style: TextStyle(color: Colors.white, fontSize: 19),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          )),
     );
-
-
-   
-}
   }
-  
+}
 
 class Onboarding1 extends StatelessWidget {
   const Onboarding1({Key? key}) : super(key: key);
@@ -100,26 +98,27 @@ class Onboarding1 extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: const StadiumBorder(),
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
-            backgroundColor: Colors.green,
-            elevation: 0,
-          ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => onboarding2())); 
-              },
-              child: Text('Next',
-              style: TextStyle(color: Colors.white),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
+                  backgroundColor: Colors.green,
+                  elevation: 0,
+                ),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (BuildContext context) => onboarding2()));
+                },
+                child: Text(
+                  'Next',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
-             ),
-  ],
+            ],
           ),
         ),
       ),
     );
   }
 }
-
 
 class onboarding2 extends StatelessWidget {
   const onboarding2({Key? key}) : super(key: key);
@@ -155,26 +154,27 @@ class onboarding2 extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: const StadiumBorder(),
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
-            backgroundColor: Colors.green,
-            elevation: 0,
-          ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => onboarding3())); 
-              },   
-              child: Text('Next',
-              style: TextStyle(color: Colors.white),
-              ), 
-             ),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
+                  backgroundColor: Colors.green,
+                  elevation: 0,
+                ),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (BuildContext context) => onboarding3()));
+                },
+                child: Text(
+                  'Next',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
   }
-  }
-
+}
 
 class onboarding3 extends StatelessWidget {
   const onboarding3({Key? key}) : super(key: key);
@@ -210,37 +210,41 @@ class onboarding3 extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: const StadiumBorder(),
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
-            backgroundColor: Colors.green,
-            elevation: 0,
-          ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => SignupPage())); 
-              },   
-              child: Text('Get Started',
-              style: TextStyle(color: Colors.white),
-              ), 
-             ),
-             ElevatedButton(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
+                  backgroundColor: Colors.green,
+                  elevation: 0,
+                ),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (BuildContext context) => SignupPage()));
+                },
+                child: Text(
+                  'Get Started',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: const StadiumBorder(),
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
-            backgroundColor: Colors.white,
-            elevation: 0,
-          ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (BuildContext context) => onboarding3())); 
-              },   
-              child: Text('Log In',
-              style: TextStyle(color: Colors.green),
-              ), 
-             ),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 120),
+                  backgroundColor: Colors.white,
+                  elevation: 0,
+                ),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (BuildContext context) => onboarding3()));
+                },
+                child: Text(
+                  'Log In',
+                  style: TextStyle(color: Colors.green),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
   }
-  }
+}
