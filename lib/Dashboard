@@ -1,0 +1,25 @@
+import 'dart:async';
+
+class Dashboard extends StatefulWidget {
+  const SplashScreen({super.key});
+
+   @override
+  _DashboardState createState() => _DashboardState();
+}
+
+ 
+class _DashboardState extends State<Dashboard> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Dashboard"),
+      ),
+    );
+  }
+}
